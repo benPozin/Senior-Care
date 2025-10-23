@@ -1,6 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Senior Care - Spirit Alliance Social
+
+A modern, responsive website for senior care services built with Next.js, featuring compassionate support, professional care, and meaningful community connections.
+
+## Features
+
+- **Hero Section** with compelling imagery and messaging
+- **Services Overview** including family support, emotional counselling, and long-term care consultation
+- **Events & Programs** showcasing upcoming community activities
+- **Contact Form** with email integration to inna@spiritalliancesocial.com
+- **Responsive Design** optimized for all devices
+- **Modern UI** with smooth animations and professional styling
+
+## Services
+
+- Family Support
+- Emotional Counselling  
+- Long-term Care Consultation
+
+## Contact
+
+- **Phone:** 416-992-4915
+- **Email:** inna@spiritalliancesocial.com
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 First, run the development server:
 
