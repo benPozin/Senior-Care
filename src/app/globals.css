@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Modern design system */
+:root { 
+  --brand: 17 94% 57%;
+  --brand-light: 17 94% 65%;
+  --brand-dark: 17 94% 45%;
+  --accent: 210 100% 50%;
+  --accent-light: 210 100% 60%;
+  --success: 142 76% 36%;
+  --warning: 38 92% 50%;
+  --error: 0 84% 60%;
+  --neutral-50: 0 0% 98%;
+  --neutral-100: 0 0% 96%;
+  --neutral-200: 0 0% 90%;
+  --neutral-300: 0 0% 83%;
+  --neutral-400: 0 0% 64%;
+  --neutral-500: 0 0% 45%;
+  --neutral-600: 0 0% 32%;
+  --neutral-700: 0 0% 25%;
+  --neutral-800: 0 0% 15%;
+  --neutral-900: 0 0% 9%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Enhanced button system */
+.btn { 
+  @apply inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.btn-brand { 
+  @apply bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 border-0;
+}
+
+.btn-secondary { 
+  @apply bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:border-slate-300;
+}
+
+.btn-outline { 
+  @apply bg-transparent text-orange-500 border-2 border-orange-500 hover:bg-orange-500 hover:text-white;
+}
+
+/* Enhanced card system */
+.card { 
+  @apply rounded-3xl border border-slate-200/50 bg-white/80 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300;
+}
+
+.card-elevated { 
+  @apply rounded-3xl border-0 bg-white shadow-2xl hover:shadow-2xl transition-all duration-300;
+}
+
+/* Modern typography */
+.text-display { 
+  @apply text-5xl md:text-6xl lg:text-7xl font-black tracking-tight;
+}
+
+.text-hero { 
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+}
+
+.text-title { 
+  @apply text-2xl md:text-3xl font-bold tracking-tight;
+}
+
+.text-subtitle { 
+  @apply text-lg md:text-xl font-medium text-slate-600;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-brand { 
+  @apply bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600;
+}
+
+.bg-gradient-hero { 
+  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900;
+}
+
+.bg-gradient-section { 
+  @apply bg-gradient-to-br from-slate-50 via-white to-slate-50;
+}
+
+/* Modern spacing */
+.section-padding { 
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.container-padding { 
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Animation utilities */
+.animate-fade-in { 
+  @apply opacity-0 animate-pulse;
+}
+
+.animate-slide-up { 
+  @apply transform translate-y-4 opacity-0 transition-all duration-700;
+}
+
+.animate-slide-in-left { 
+  @apply transform -translate-x-4 opacity-0 transition-all duration-700;
+}
+
+.animate-slide-in-right { 
+  @apply transform translate-x-4 opacity-0 transition-all duration-700;
+}
+
+/* Custom animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
